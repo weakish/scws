@@ -32,40 +32,40 @@ else
 $ignore = $showa = $stats = $duality = false;
 $checked_ignore = $checked_showa = $checked_stats = $checked_duality = '';
 
-// 是否清除标点符号
+// 锟角凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 if (isset($_REQUEST['ignore']) && !strcmp($_REQUEST['ignore'], 'yes'))
 {
 	$ignore = true;
 	$checked_ignore = ' checked';
 }
 
-// 是否散字自动二元
+// 锟角凤拷散锟斤拷锟皆讹拷锟斤拷元
 if (isset($_REQUEST['duality']) && !strcmp($_REQUEST['duality'], 'yes'))
 {
 	$duality = true;
 	$checked_duality = ' checked';
 }
 
-// 是否标注词性
+// 锟角凤拷锟斤拷注锟斤拷锟斤拷
 if (isset($_REQUEST['showa']) && !strcmp($_REQUEST['showa'], 'yes'))
 {
 	$showa = true;
 	$checked_showa = ' checked';
 }
 
-// 是转看统计表
+// 锟角凤拷锟斤拷统锟狡憋拷
 if (isset($_REQUEST['stats']) && !strcmp($_REQUEST['stats'], 'yes'))
 {
 	$stats = true;
 	$checked_stats = ' checked';
 }
 
-// 是否复合分词?
+// 锟角否复合分达拷?
 $multi = 0;
 if (isset($_REQUEST['multi']) && is_array($_REQUEST['multi'])){
 	foreach ($_REQUEST['multi'] as $mval) $multi |= intval($mval);
 }
-$mtags = array('最短词' => 1, '二元' => 2, '重要单字' => 4, '全部单字' => 8);
+$mtags = array('锟斤拷锟教达拷' => 1, '锟斤拷元' => 2, '锟斤拷要锟斤拷锟斤拷' => 4, '全锟斤拷锟斤拷锟斤拷' => 8);
 
 $xattr = &$_REQUEST['xattr'];
 if (!isset($xattr)) $xattr = '~v';
@@ -89,7 +89,7 @@ $cws->send_text($mydata);
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=gbk">
-<title>PHP简易中文分词(SCWS) 第4版在线演示 (by hightman)</title>
+<title>PHP锟斤拷锟斤拷锟斤拷锟侥分达拷(SCWS) 锟斤拷4锟斤拷锟斤拷锟斤拷锟斤拷示 (by hightman)</title>
 <style type="text/css">
 <!--
 td, body	{ background-color: #efefef; font-family: tahoma; font-size: 14px; word-break: break-all; }
@@ -100,37 +100,37 @@ small		{ font-size: 12px; }
 </head>
 <body>
 <h3>
-  <font color=red>PHP简易中文分词(SCWS)</font>
-  <font color=blue>第4版(GBK)</font> - 在线演示 (by hightman)
+  <font color=red>PHP锟斤拷锟斤拷锟斤拷锟侥分达拷(SCWS)</font>
+  <font color=blue>锟斤拷4锟斤拷(GBK)</font> - 锟斤拷锟斤拷锟斤拷示 (by hightman)
 </h3>  
-基本功能: 根据词频词典较为智能的中文分词，支持规则识别人名、地区等。（<a href="v48.php">UTF-8点这里</a> <a href="v48.cht.php">繁体版</a>）<br />
-<a href="http://www.xunsearch.com" target="_blank">推荐看看，结合 scws + xapian 构建的开源全文搜索引擎 xunsearch ！！</a> <hr />
+锟斤拷锟斤拷锟斤拷锟斤拷: 锟斤拷锟捷达拷频锟绞碉拷锟斤拷为锟斤拷锟杰碉拷锟斤拷锟侥分词ｏ拷支锟街癸拷锟斤拷识锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟饺★拷锟斤拷<a href="v48.php">UTF-8锟斤拷锟斤拷锟斤拷</a> <a href="v48.cht.php">锟斤拷锟斤拷锟斤拷</a>锟斤拷<br />
+<a href="http://www.xunsearch.com" target="_blank">锟狡硷拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷 scws + xapian 锟斤拷锟斤拷锟侥匡拷源全锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷 xunsearch 锟斤拷锟斤拷</a> <hr />
 
 <table width=100% border=0>
   <tr>
     <form method=post>
 	<td width=100%>
-	  <strong>请输入文字点击提交尝试分词: </strong> <br />
+	  <strong>锟斤拷锟斤拷锟斤拷锟斤拷锟街碉拷锟斤拷锟结交锟斤拷锟皆分达拷: </strong> <br />
 	  <textarea name=mydata cols=60 rows=14 class=demotx><?php echo $mydata; ?></textarea>
 	  <small>
 	    <span style="color:#666666;">		
-	    <strong>[复合分词选项]</strong>
+	    <strong>[锟斤拷锟较分达拷选锟斤拷]</strong>
 <?php foreach ($mtags as $mtag => $mval) { ?>
 		<input type=checkbox name="multi[]" value=<?php echo $mval . " " . (($multi & $mval) ? " checked" : "");?>><?php echo $mtag;?>&nbsp;
 <?php } ?>
 		</span>
 	    <br />
-		<input type=checkbox name=ignore value="yes"<?php echo $checked_ignore;?>> 清除标点符号
+		<input type=checkbox name=ignore value="yes"<?php echo $checked_ignore;?>> 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 		&nbsp;
-		<input type=checkbox name=duality value="yes"<?php echo $checked_duality;?>> 散字二元
+		<input type=checkbox name=duality value="yes"<?php echo $checked_duality;?>> 散锟街讹拷元
 		&nbsp;
-		<input type=checkbox name=showa value="yes"<?php echo $checked_showa;?>> <font color=green>标注词性</font>
+		<input type=checkbox name=showa value="yes"<?php echo $checked_showa;?>> <font color=green>锟斤拷注锟斤拷锟斤拷</font>
 		&nbsp;
-		<input type=checkbox name=stats value="yes"<?php echo $checked_stats;?>> <font color=red>只看统计</font>
-		<input type=text name=limit size=2 value="<?php echo intval($limit);?>">个
+		<input type=checkbox name=stats value="yes"<?php echo $checked_stats;?>> <font color=red>只锟斤拷统锟斤拷</font>
+		<input type=text name=limit size=2 value="<?php echo intval($limit);?>">锟斤拷
 		&nbsp;
-		统计词性: 
-		<input type=text name=xattr size=8 value="<?php echo htmlspecialchars($xattr);?>">(多个用,分开 以~开头表示不包含)
+		统锟狡达拷锟斤拷: 
+		<input type=text name=xattr size=8 value="<?php echo htmlspecialchars($xattr);?>">(锟斤拷锟斤拷锟斤拷,锟街匡拷 锟斤拷~锟斤拷头锟斤拷示锟斤拷锟斤拷锟斤拷)
 	  </small>
 	  <input type=submit>
 	  </td>
@@ -141,8 +141,8 @@ small		{ font-size: 12px; }
 	</tr>
 	<tr>
 	  <td width=100%>
-	    <strong>分词结果(原文总长度 <?php echo strlen($mydata); ?> 字符) </strong>
-		(<a href="http://bbs.xunsearch.com/forumdisplay.php?fid=8" target="_blank">这次分词结果不对，点击汇报</a>)
+	    <strong>锟街词斤拷锟斤拷(原锟斤拷锟杰筹拷锟斤拷 <?php echo strlen($mydata); ?> 锟街凤拷) </strong>
+		(<a href="http://bbs.xunsearch.com/forumdisplay.php?fid=8" target="_blank">锟斤拷锟轿分词斤拷锟斤拷锟斤拷锟皆ｏ拷锟斤拷锟斤拷锟姐报</a>)
 		<br />
 		<textarea cols=60 rows=14 class=demotx readonly style="color:#888;">
 <?php
@@ -187,8 +187,8 @@ $time = $time_end - $time_start;
 ?>
 		</textarea>
 		<small>
-		  分词耗时: <?php echo $time; ?>秒
-		  <a href="../">返回scws主页</a>或直接<a href="?source" target="_blank">查看源码</a> Powered by <?php echo scws_version();?>
+		  锟街词猴拷时: <?php echo $time; ?>锟斤拷
+		  <a href="../">锟斤拷锟斤拷scws锟斤拷页</a>锟斤拷直锟斤拷<a href="?source" target="_blank">锟介看源锟斤拷</a> Powered by <?php echo scws_version();?>
 		</small>
 	</td>
   </tr>
